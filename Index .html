@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#2457E6">
+<title>GROOMING INVESTIGATOR — Professional Humas Academy</title>
+<style>
+:root{--blue:#2457E6;--coral:#FF6B6B;--yellow:#FFB547;--mint:#35C9A5;--lav:#A78BFA;--cloud:#F7F9FC;--ink:#17233A;--muted:#68758B}
+*{box-sizing:border-box}body{margin:0;background:var(--cloud);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.page{min-height:100vh;overflow:hidden;position:relative}.blob{position:absolute;border-radius:50%;pointer-events:none}.one{width:340px;height:340px;background:#E9EFFF;top:-150px;right:-100px}.two{width:260px;height:260px;background:#FFF0E9;bottom:-130px;left:-100px}
+nav,.hero,.features,footer{position:relative;z-index:1}nav{max-width:1180px;margin:auto;padding:24px 5%;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:12px;font-weight:950;letter-spacing:.04em}.mark{width:44px;height:44px;border-radius:14px;background:var(--blue);color:white;display:grid;place-items:center;font-size:23px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.16em;margin-top:3px}.tag{background:#EAF0FF;color:var(--blue);padding:10px 15px;border-radius:30px;font-size:11px;font-weight:850}
+.hero{max-width:1180px;margin:auto;padding:50px 5% 55px;display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#E8FBF5;color:#13866D;padding:9px 13px;border-radius:30px;font-size:10px;font-weight:900;letter-spacing:.1em}.dot{width:8px;height:8px;border-radius:50%;background:var(--mint)}
+h1{font-size:clamp(43px,6vw,76px);line-height:.98;letter-spacing:-.055em;margin:23px 0 14px}h1 span{color:var(--blue)}.subtitle{color:var(--coral);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:14px}
+.desc{color:var(--muted);line-height:1.75;max-width:500px;margin:22px 0 27px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;border-radius:15px;padding:15px 20px;min-height:52px;font:inherit;font-weight:850;cursor:pointer}.primary{background:var(--blue);color:white;box-shadow:0 12px 25px #2457E633}.secondary{background:white;color:var(--ink);border:1px solid #E4EAF3}.btn:hover{transform:translateY(-2px)}.note{font-size:12px;color:#8994A7;margin-top:17px}
+.visual{min-height:420px;display:grid;place-items:center;position:relative}.orbit{width:min(430px,100%);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#EAF0FF,#F7F0FF);display:grid;place-items:center;position:relative}.orbit:before{content:"";position:absolute;inset:9%;border:2px dashed #B9C9F8;border-radius:50%}
+.center{position:relative;z-index:2;background:white;border-radius:27px;padding:25px;width:66%;text-align:center;box-shadow:0 24px 70px #2457E622;transform:rotate(-3deg)}.shield{width:78px;height:78px;margin:0 auto 12px;border-radius:25px;background:linear-gradient(135deg,var(--blue),#6C8FFF);display:grid;place-items:center;color:white;font-size:38px}.center b{display:block}.center small{font-size:10px;color:var(--muted)}
+.float{position:absolute;z-index:3;background:white;padding:12px 15px;border-radius:16px;box-shadow:0 12px 30px #17233A18;font-size:11px;font-weight:900}.a{top:12%;left:0;color:#13866D;transform:rotate(-7deg)}.b{top:24%;right:-2%;color:#D65B5B;transform:rotate(6deg)}.c{bottom:13%;left:3%;color:#7652C9;transform:rotate(5deg)}.d{bottom:8%;right:1%;color:#B47716;transform:rotate(-5deg)}
+.features{max-width:1050px;margin:0 auto 45px;padding:0 5%;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{background:white;border:1px solid #E8EDF5;border-radius:18px;padding:18px;display:flex;gap:12px;align-items:center}.ico{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:20px;flex:none}.feature b{font-size:13px}.feature small{display:block;color:var(--muted);font-size:11px;margin-top:4px}footer{text-align:center;padding:0 20px 25px;color:#929DB0;font-size:11px}
+.backdrop{display:none;position:fixed;inset:0;background:#101A2BCC;z-index:5;place-items:center;padding:18px}.backdrop.show{display:grid}.modal{background:white;border-radius:23px;padding:24px;width:min(430px,100%);box-shadow:0 30px 80px #0004}.modalhead{display:flex;justify-content:space-between;align-items:center}.modal h2{margin:0}.close{border:0;background:#F1F4F9;border-radius:10px;width:38px;height:38px;font-size:20px}.modal p{color:var(--muted);font-size:13px;line-height:1.6}.label{display:block;font-size:12px;font-weight:800;margin:16px 0 7px}.field{width:100%;padding:13px;border:1px solid #DCE3EF;border-radius:12px;font:inherit;background:white}.modal .btn{width:100%;margin-top:17px}
+@media(max-width:760px){nav{padding:18px 5%}.tag{display:none}.hero{padding:30px 6%;grid-template-columns:1fr;gap:12px}.visual{min-height:320px;order:-1}.orbit{width:min(330px,90%)}.center{padding:19px}.shield{width:65px;height:65px;font-size:31px}.float{font-size:10px;padding:10px 12px}.features{grid-template-columns:1fr;padding:0 6%;margin-bottom:30px}h1{font-size:49px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body><div class="page"><div class="blob one"></div><div class="blob two"></div>
+<nav><div class="brand"><div class="mark">✦</div><div>GROOMING<br>INVESTIGATOR<small>PROFESSIONAL HUMAS ACADEMY</small></div></div><div class="tag">LEARNING • INVESTIGATING • GROWING</div></nav>
+<main class="hero"><section><div class="eyebrow"><span class="dot"></span> YOUR PROFESSIONAL JOURNEY STARTS HERE</div>
+<h1>Look Sharp.<br><span>Think Smart.</span><br>Be Professional.</h1><div class="subtitle">Professional Humas Academy</div>
+<p class="desc">Jelajahi dunia grooming dan komunikasi profesional melalui lima level investigasi, tantangan interaktif, dan simulasi dunia kerja.</p>
+<div class="actions"><button class="btn primary" onclick="openAccess('student')">🎓 Student Area →</button><button class="btn secondary" onclick="openAccess('teacher')">✦ Teacher Area</button></div>
+<div class="note">Be Clean. Be Neat. Be Professional.</div></section>
+<section class="visual" aria-label="Ilustrasi akademi"><div class="orbit"><div class="center"><div class="shield">🔎</div><b>THE PROFESSIONAL<br>INVESTIGATION</b><small>5 LEVELS • 1 PROFESSIONAL YOU</small></div><div class="float a">✓ Hygiene Detective</div><div class="float b">✦ Style Analyst</div><div class="float c">◉ Grooming Expert</div><div class="float d">★ Communication Pro</div></div></section></main>
+<section class="features"><div class="feature"><div class="ico" style="background:#EAF0FF">🧭</div><div><b>5 Learning Levels</b><small>Belajar bertahap dari dasar hingga profesional.</small></div></div><div class="feature"><div class="ico" style="background:#FFF0EC">🎯</div><div><b>Interactive Missions</b><small>Uji keterampilan melalui tantangan dan simulasi.</small></div></div><div class="feature"><div class="ico" style="background:#E8FBF5">🏆</div><div><b>Track Your Growth</b><small>Kumpulkan XP, badge, evidence, dan sertifikat.</small></div></div></section>
+<footer>Created by Ghina Fatimah, S.A.P., Gr. • GROOMING INVESTIGATOR</footer></div>
+<section id="studentDashboard" style="display:none;min-height:100vh;padding:28px 6%;background:var(--cloud);position:relative;z-index:2">
+ <div style="max-width:1050px;margin:auto">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div class="brand"><div class="mark">✦</div><div>GROOMING<br>INVESTIGATOR<small>STUDENT DASHBOARD</small></div></div><button class="btn secondary" onclick="backToWelcome()">← Kembali</button></div>
+  <div style="margin:42px 0 28px;background:white;border:1px solid #E8EDF5;border-radius:24px;padding:28px"><div class="eyebrow"><span class="dot"></span> INVESTIGATOR PROFILE</div><h1 style="font-size:clamp(32px,5vw,54px);margin:18px 0 8px">Halo, <span id="studentGreeting">Investigator</span>!</h1><p class="desc" style="margin:0">Selamat datang di Professional Humas Academy. Perjalanan investigasimu akan dimulai di sini.</p></div>
+  <h2 style="margin:0 0 8px">Peta 5 Level Investigasi</h2><p style="color:var(--muted);margin:0 0 20px">Pilih level untuk mengenal misi pembelajaran. Konten setiap level akan dilengkapi pada tahap berikutnya.</p>
+  <div class="features" style="max-width:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+   <div class="feature"><div class="ico" style="background:#E8FBF5">🧼</div><div><b>Level 1 — Hygiene Detective</b><small>The Hygiene Mystery</small></div></div>
+   <div class="feature"><div class="ico" style="background:#EAF0FF">🪞</div><div><b>Level 2 — Grooming Expert</b><small>The Grooming Emergency</small></div></div>
+   <div class="feature"><div class="ico" style="background:#FFF0EC">👔</div><div><b>Level 3 — Style Analyst</b><small>The Dress Code Dilemma</small></div></div>
+   <div class="feature"><div class="ico" style="background:#F1ECFF">💬</div><div><b>Level 4 — Communication Pro</b><small>The Body Language Case</small></div></div>
+   <div class="feature"><div class="ico" style="background:#FFF6E5">🏆</div><div><b>Level 5 — Professional Humas</b><small>The First Impression Challenge</small></div></div>
+  </div><p class="note" style="margin-top:22px">Dashboard awal aktif. Materi, misi, XP, penilaian, dan sinkronisasi data akan dibangun bertahap.</p>
+ </div>
+</section>
+<section id="teacherDashboard" style="display:none;min-height:100vh;padding:28px 6%;background:var(--cloud);position:relative;z-index:2">
+ <div style="max-width:1050px;margin:auto">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div class="brand"><div class="mark">✦</div><div>GROOMING<br>INVESTIGATOR<small>TEACHER CONTROL CENTER</small></div></div><button class="btn secondary" onclick="logoutTeacher()">Logout</button></div>
+  <div style="margin:42px 0 28px;background:white;border:1px solid #E8EDF5;border-radius:24px;padding:28px"><div class="eyebrow"><span class="dot"></span> ADMINISTRATOR ACCESS VERIFIED</div><h1 style="font-size:clamp(32px,5vw,54px);margin:18px 0 8px">Selamat datang, <span id="teacherGreeting">Guru</span>!</h1><p class="desc" style="margin:0">Sesi administrator berhasil diverifikasi. Ini adalah kerangka awal Teacher Control Center.</p></div>
+  <h2>Teacher Control Center</h2><div class="features" style="max-width:none;padding:0;margin:20px 0;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+   <div class="feature"><div class="ico" style="background:#EAF0FF">👥</div><div><b>Data Siswa</b><small>Pengelolaan daftar siswa</small></div></div>
+   <div class="feature"><div class="ico" style="background:#E8FBF5">📊</div><div><b>Learning Progress</b><small>Pemantauan progres Level 1–5</small></div></div>
+   <div class="feature"><div class="ico" style="background:#FFF0EC">📝</div><div><b>Assessment</b><small>Rekap hasil penilaian</small></div></div>
+   <div class="feature"><div class="ico" style="background:#F1ECFF">🏆</div><div><b>XP & Achievement</b><small>Poin dan penghargaan</small></div></div>
+   <div class="feature"><div class="ico" style="background:#FFF6E5">📄</div><div><b>Reports</b><small>Laporan pembelajaran</small></div></div>
+   <div class="feature"><div class="ico" style="background:#EAF0FF">⚙️</div><div><b>Management</b><small>Pengaturan akademi</small></div></div>
+  </div><p class="note">Catatan: autentikasi dan verifikasi sesi sudah dihubungkan. Fitur data, nilai, laporan, dan manajemen belum diaktifkan.</p>
+ </div>
+</section>
+<div class="backdrop" id="backdrop" onclick="if(event.target===this)closeAccess()"><div class="modal" role="dialog" aria-modal="true"><div class="modalhead"><h2 id="title">Student Area</h2><button class="close" onclick="closeAccess()">×</button></div><p id="desc">Masukkan nama untuk memulai perjalanan belajar.</p>
+<div id="student"><label class="label" for="name">Nama siswa</label><input class="field" id="name" placeholder="Masukkan nama kamu" autocomplete="name"></div>
+<div id="teacher" style="display:none"><label class="label" for="teacherName">Nama guru</label><input class="field" id="teacherName" placeholder="Masukkan nama guru" autocomplete="username"><label class="label" for="teacherPin">PIN 6 digit</label><input class="field" id="teacherPin" type="password" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="Masukkan PIN guru" autocomplete="current-password"></div>
+<button class="btn primary" id="continueButton" onclick="continueAccess()">Continue →</button><p id="feedback" aria-live="polite"></p></div></div>
+<script>
+const ACADEMY_API = "https://dhfhitchnbxsjxcfkhig.supabase.co/functions/v1/academy-api";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_JCxwUncbI-O6r40tdkIVCg_NmuWoHoi";
+let role = "student";
+
+function showStudentDashboard(name){
+  document.querySelector('.page').style.display='none';
+  document.getElementById('teacherDashboard').style.display='none';
+  document.getElementById('studentDashboard').style.display='block';
+  document.getElementById('studentGreeting').textContent=name;
+}
+function backToWelcome(){
+  document.getElementById('studentDashboard').style.display='none';
+  document.getElementById('teacherDashboard').style.display='none';
+  document.querySelector('.page').style.display='block';
+}
+function openAccess(r){
+  role=r;
+  document.getElementById('title').textContent=r==='student'?'Student Area':'Teacher Area';
+  document.getElementById('desc').textContent=r==='student'?'Masukkan nama untuk memulai perjalanan belajar.':'Masukkan nama administrator dan PIN 6 digit.';
+  document.getElementById('student').style.display=r==='student'?'block':'none';
+  document.getElementById('teacher').style.display=r==='teacher'?'block':'none';
+  document.getElementById('feedback').textContent='';
+  document.getElementById('backdrop').classList.add('show');
+}
+function closeAccess(){document.getElementById('backdrop').classList.remove('show');}
+async function continueAccess(){
+  const f=document.getElementById('feedback');
+  const btn=document.getElementById('continueButton');
+  if(role==='student'){
+    const studentName=document.getElementById('name').value.trim();
+    if(studentName.length<2){f.textContent='Masukkan nama minimal 2 karakter.';return;}
+    localStorage.setItem('gi_student_name',studentName);
+    closeAccess(); showStudentDashboard(studentName); return;
+  }
+  const fullName=document.getElementById('teacherName').value.trim();
+  const pin=document.getElementById('teacherPin').value.trim();
+  if(fullName.length<2 || !/^\d{6}$/.test(pin)){
+    f.textContent='Masukkan nama guru dan PIN tepat 6 digit.';return;
+  }
+  btn.disabled=true; btn.textContent='Memverifikasi...'; f.textContent='Menghubungkan ke server...';
+  try{
+    const response=await fetch(ACADEMY_API,{
+      method:'POST',
+      headers:{'Content-Type':'application/json','apikey':SUPABASE_PUBLISHABLE_KEY,'Authorization':'Bearer '+SUPABASE_PUBLISHABLE_KEY},
+      body:JSON.stringify({action:'verify_teacher',full_name:fullName,pin})
+    });
+    const result=await response.json();
+    if(!response.ok || !result.success){f.textContent=result.message || 'Login guru gagal.';return;}
+    if(!result.session_token){f.textContent='Server tidak mengembalikan sesi. Hubungi administrator.';return;}
+    sessionStorage.setItem('gi_teacher_session',result.session_token);
+    sessionStorage.setItem('gi_teacher_name',result.teacher?.full_name || fullName);
+    document.getElementById('backdrop').classList.remove('show');
+    showTeacherDashboard(result.teacher?.full_name || fullName);
+    document.getElementById('teacherPin').value='';
+  }catch(error){
+    f.textContent='Tidak dapat terhubung ke server. Periksa koneksi dan konfigurasi Edge Function.';
+  }finally{
+    btn.disabled=false;btn.textContent='Continue →';
+  }
+}
+async function showTeacherDashboard(name){
+  document.querySelector('.page').style.display='none';
+  document.getElementById('studentDashboard').style.display='none';
+  document.getElementById('teacherDashboard').style.display='block';
+  document.getElementById('teacherGreeting').textContent=name;
+  const token=sessionStorage.getItem('gi_teacher_session');
+  if(!token){logoutTeacher();return;}
+  try{
+    const response=await fetch(ACADEMY_API,{
+      method:'POST',headers:{'Content-Type':'application/json','apikey':SUPABASE_PUBLISHABLE_KEY,'Authorization':'Bearer '+SUPABASE_PUBLISHABLE_KEY},
+      body:JSON.stringify({action:'verify_teacher_session',session_token:token})
+    });
+    const result=await response.json();
+    if(!response.ok || !result.success){logoutTeacher();alert('Sesi guru tidak valid atau sudah berakhir. Silakan login kembali.');return;}
+  }catch(e){logoutTeacher();alert('Tidak dapat memverifikasi sesi guru. Silakan login kembali.');}
+}
+function logoutTeacher(){sessionStorage.removeItem('gi_teacher_session');sessionStorage.removeItem('gi_teacher_name');document.getElementById('teacherDashboard').style.display='none';document.querySelector('.page').style.display='block';}
+window.addEventListener('DOMContentLoaded',()=>{
+ const saved=localStorage.getItem('gi_student_name');
+ if(saved){/* Halaman pembuka tetap ditampilkan agar pengguna memilih area. */}
+});
+</script></body></html>
